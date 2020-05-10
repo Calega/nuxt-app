@@ -25,15 +25,7 @@
 </template>
 
 <script>
-
-import AppControlInput from '@/components/UI/AppControlInput'
-import AppButton from '@/components/UI/AppButton'
-
 export default {
-    components: {
-        AppButton,
-        AppControlInput
-    },
     props: {
         post: {
             type: Object,
@@ -55,7 +47,6 @@ export default {
         onSave() {
             // Save the post
             // TODO : Validate the data here
-            console.log(this.editedPost);
             this.$emit('submit', this.editedPost)
         },
         onCancel() {
