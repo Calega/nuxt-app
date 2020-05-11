@@ -1,4 +1,5 @@
 import colors from 'vuetify/es5/util/colors'
+const bodyParser = require('body-parser')
 
 export default {
   mode: 'universal',
@@ -75,6 +76,11 @@ export default {
     extend (config, ctx) {
     }
   },
+
+  serverMiddleware: [
+    bodyParser.json(),
+    '~/api'
+  ],
 
   // router: {
   //   middleware: 'log'
